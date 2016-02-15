@@ -1,0 +1,26 @@
+<script type="text/javascript">
+
+	function selecsort(arr){
+		var len = arr.length;
+		//Used when swapping values
+		var temp;
+		//To keep track of the index that has the lowest value
+		var trackIdx;
+
+		for(var i=0; i<len; i++){
+			trackIdx = i;
+			for(var j= i+1; j<len; j++){
+				if (arr[j] < arr[trackIdx]){
+					trackIdx = j
+				}
+			}
+			temp = arr[i];
+			arr[i] = arr[trackIdx];
+			arr[trackIdx] = temp;
+		}
+		console.log(arr);
+		return arr;
+	}
+	selecsort([5,6,3,4,1,2]);
+
+</script>
